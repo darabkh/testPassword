@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class PasswordTestCases
 {
-	final static Logger log = Logger.getLogger(PasswordTestCases.class);
+    final static Logger log = Logger.getLogger(PasswordTestCases.class);
     @DataProvider
     public static Object[][] testPasswordData() {
         return new Object[][] {
@@ -35,7 +35,7 @@ public class PasswordTestCases
     }
     
     @Test(dataProvider = "testPasswordData")
-    public void testApp(String testCaseId, String testDescription, boolean expectedResult, String oldPassword, String newPassword)
+    public void testPassword(String testCaseId, String testDescription, boolean expectedResult, String oldPassword, String newPassword)
     {
     	BasicConfigurator.configure();
     	log.info("Executing testId: " + testCaseId);
